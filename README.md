@@ -1,6 +1,13 @@
 ## Quick Start
 
-Add your MONGO_URI to the default.json file. Make sure you set an env var for that and the jwtSecret on deployment
+Enviornment Variables Required:
+
+```
+PORT
+MONGO_URI
+MONGO_DB_NAME
+JWT_SECRET
+```
 
 ```bash
 # Install dependencies for server
@@ -20,17 +27,6 @@ npm run client
 
 # Server runs on http://localhost:5000 and client on http://localhost:3000
 ```
-
-## Deployment
-
-There is a Heroku post build script so that you do not have to compile your React frontend manually, it is done on the server. Simply push to Heroku and it will build and load the client index.html page
-
-## App Info
-
-### Author
-
-Brad Traversy
-[Traversy Media](http://www.traversymedia.com)
 
 ### Version
 
