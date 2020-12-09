@@ -2,6 +2,8 @@
 
 Enviornment Variables Required:
 
+For Server: 
+
 ```
 PORT
 MONGO_URI
