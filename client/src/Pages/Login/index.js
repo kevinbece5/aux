@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { loginUser, useAuthState, useAuthDispatch } from "../../Context";
 import styles from "./login.module.css";
@@ -8,7 +8,13 @@ function Login(props) {
   const [password, setPassword] = useState("");
   const dispatch = useAuthDispatch();
 
-  const { loading, errorMessage } = useAuthState();
+  const { loading, errorMessage, token } = useAuthState();
+
+  useEffect(() => {
+    if (token) {
+      props.history.push("/dashboard");
+    }
+  }, [token, props.history]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
